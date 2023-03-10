@@ -1,0 +1,1769 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.10 on darwin)" generated="20230310 06:49:20.092" rpa="false" schemaversion="3">
+<suite id="s1" name="fetchTest" source="/Users/admin/Documents/US Veterans/fetchTest.robot">
+<test id="s1-t1" name="This is a test case for navigation, authentication and check the article content" line="13">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>20s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230310 06:49:20.247" endtime="20230310 06:49:20.247"/>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>20s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20230310 06:49:20.247" endtime="20230310 06:49:20.248"/>
+</kw>
+<kw name="Given I go to the given link https://vnexpress.net/trong-tre-du-co-ve-lam-to-4545196.html successfully">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230310 06:49:20.248" level="INFO">Opening browser 'chrome' to base url 'https://vnexpress.net/trong-tre-du-co-ve-lam-to-4545196.html'.</msg>
+<status status="PASS" starttime="20230310 06:49:20.248" endtime="20230310 06:49:26.060"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230310 06:49:26.061" endtime="20230310 06:49:26.568"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${titleOfCurrentPage}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20230310 06:49:26.577" level="INFO">${titleOfCurrentPage} = Trồng tre dụ cò về làm tổ - VnExpress</msg>
+<status status="PASS" starttime="20230310 06:49:26.568" endtime="20230310 06:49:26.577"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n"Title of current page is: ${titleOfCurrentPage} "</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230310 06:49:26.577" endtime="20230310 06:49:26.578"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Trồng tre dụ cò về làm tổ - VnExpress</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230310 06:49:26.583" level="INFO">Page title is 'Trồng tre dụ cò về làm tổ - VnExpress'.</msg>
+<status status="PASS" starttime="20230310 06:49:26.578" endtime="20230310 06:49:26.583"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>Trồng tre dụ cò về làm tổ - VnExpress</arg>
+<arg>${titleOfCurrentPage}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:49:26.583" endtime="20230310 06:49:26.584"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://h1[contains(text(), 'Trồng tre dụ cò về làm tổ ')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230310 06:49:26.584" endtime="20230310 06:49:26.615"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath://h1[contains(text(), 'Trồng tre dụ cò về làm tổ ')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230310 06:49:26.634" level="INFO">Element 'xpath://h1[contains(text(), 'Trồng tre dụ cò về làm tổ ')]' is displayed.</msg>
+<status status="PASS" starttime="20230310 06:49:26.615" endtime="20230310 06:49:26.635"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://h1[contains(text(), 'Trồng tre dụ cò về làm tổ ')]</arg>
+<arg>Trồng tre dụ cò về làm tổ</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230310 06:49:26.635" level="INFO">Verifying element 'xpath://h1[contains(text(), 'Trồng tre dụ cò về làm tổ ')]' contains exact text 'Trồng tre dụ cò về làm tổ'.</msg>
+<status status="PASS" starttime="20230310 06:49:26.635" endtime="20230310 06:49:26.855"/>
+</kw>
+<status status="PASS" starttime="20230310 06:49:20.248" endtime="20230310 06:49:26.855"/>
+</kw>
+<kw name="When I try to go to a new page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath:(//a[contains(@title, 'Kinh doanh')])[2]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230310 06:49:26.856" endtime="20230310 06:49:26.898"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>xpath:(//a[contains(@title, 'Kinh doanh')])[2]</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230310 06:49:26.899" endtime="20230310 06:49:27.003"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath:(//a[contains(@title, 'Kinh doanh')])[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230310 06:49:27.063" level="INFO">Element 'xpath:(//a[contains(@title, 'Kinh doanh')])[2]' is displayed.</msg>
+<status status="PASS" starttime="20230310 06:49:27.003" endtime="20230310 06:49:27.063"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>xpath:(//a[contains(@title, 'Kinh doanh')])[2]</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230310 06:49:27.063" endtime="20230310 06:49:27.094"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath:(//a[contains(@title, 'Kinh doanh')])[2]</arg>
+<arg>Kinh doanh</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230310 06:49:27.094" level="INFO">Verifying element 'xpath:(//a[contains(@title, 'Kinh doanh')])[2]' contains exact text 'Kinh doanh'.</msg>
+<status status="PASS" starttime="20230310 06:49:27.094" endtime="20230310 06:49:27.152"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:(//a[contains(@title, 'Kinh doanh')])[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230310 06:49:27.153" level="INFO">Clicking element 'xpath:(//a[contains(@title, 'Kinh doanh')])[2]'.</msg>
+<status status="PASS" starttime="20230310 06:49:27.152" endtime="20230310 06:49:28.674"/>
+</kw>
+<status status="PASS" starttime="20230310 06:49:26.856" endtime="20230310 06:49:28.674"/>
+</kw>
+<kw name="Then I shall be able to go to a new page successfully">
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${titleOfNewPage}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20230310 06:49:28.681" level="INFO">${titleOfNewPage} = Tin kinh doanh: Thị trường, tài chính, kinh tế, doanh nghiệp - VnExpress Kinh Doanh</msg>
+<status status="PASS" starttime="20230310 06:49:28.674" endtime="20230310 06:49:28.681"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n"Title of a new page is: ${titleOfNewPage} "</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230310 06:49:28.681" endtime="20230310 06:49:28.682"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Tin kinh doanh: Thị trường, tài chính, kinh tế, doanh nghiệp - VnExpress Kinh Doanh</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230310 06:49:28.685" level="INFO">Page title is 'Tin kinh doanh: Thị trường, tài chính, kinh tế, doanh nghiệp - VnExpress Kinh Doanh'.</msg>
+<status status="PASS" starttime="20230310 06:49:28.682" endtime="20230310 06:49:28.686"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>Tin kinh doanh: Thị trường, tài chính, kinh tế, doanh nghiệp - VnExpress Kinh Doanh</arg>
+<arg>${titleOfNewPage}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:49:28.686" endtime="20230310 06:49:28.686"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>xpath://h1[contains(text(), 'Trồng tre dụ cò về làm tổ ')]</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20230310 06:49:28.686" endtime="20230310 06:49:48.737"/>
+</kw>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<arg>xpath://h1[contains(text(), 'Trồng tre dụ cò về làm tổ ')]</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<msg timestamp="20230310 06:50:08.744" level="INFO">Element 'xpath://h1[contains(text(), 'Trồng tre dụ cò về làm tổ ')]' did not exist.</msg>
+<status status="PASS" starttime="20230310 06:49:48.737" endtime="20230310 06:50:08.744"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath:(//a[contains(@title, 'Ebank')])[3]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230310 06:50:08.744" endtime="20230310 06:50:08.767"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath:(//a[contains(@title, 'Ebank')])[3]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230310 06:50:08.784" level="INFO">Element 'xpath:(//a[contains(@title, 'Ebank')])[3]' is displayed.</msg>
+<status status="PASS" starttime="20230310 06:50:08.767" endtime="20230310 06:50:08.784"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath:(//a[contains(@title, 'Ebank')])[3]</arg>
+<arg>Ebank</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230310 06:50:08.785" level="INFO">Verifying element 'xpath:(//a[contains(@title, 'Ebank')])[3]' contains exact text 'Ebank'.</msg>
+<status status="PASS" starttime="20230310 06:50:08.784" endtime="20230310 06:50:08.803"/>
+</kw>
+<status status="PASS" starttime="20230310 06:49:28.674" endtime="20230310 06:50:08.803"/>
+</kw>
+<kw name="And I try to go back to the previous page">
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20230310 06:50:08.804" endtime="20230310 06:50:11.471"/>
+</kw>
+<status status="PASS" starttime="20230310 06:50:08.803" endtime="20230310 06:50:11.472"/>
+</kw>
+<kw name="Then I shall be able to go back the previous pages successfully">
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${titleOfPreviousPage}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20230310 06:50:11.574" level="INFO">${titleOfPreviousPage} = Trồng tre dụ cò về làm tổ - VnExpress</msg>
+<status status="PASS" starttime="20230310 06:50:11.473" endtime="20230310 06:50:11.574"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n"Title of the previous page is: ${titleOfPreviousPage} "</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230310 06:50:11.574" endtime="20230310 06:50:11.575"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Trồng tre dụ cò về làm tổ - VnExpress</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230310 06:50:11.579" level="INFO">Page title is 'Trồng tre dụ cò về làm tổ - VnExpress'.</msg>
+<status status="PASS" starttime="20230310 06:50:11.575" endtime="20230310 06:50:11.579"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>Trồng tre dụ cò về làm tổ - VnExpress</arg>
+<arg>${titleOfPreviousPage}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:50:11.579" endtime="20230310 06:50:11.580"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>xpath:(//a[contains(@title, 'Ebank')])[3]</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20230310 06:50:11.580" endtime="20230310 06:50:31.598"/>
+</kw>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<arg>xpath:(//a[contains(@title, 'Ebank')])[3]</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<msg timestamp="20230310 06:50:51.624" level="INFO">Element 'xpath:(//a[contains(@title, 'Ebank')])[3]' did not exist.</msg>
+<status status="PASS" starttime="20230310 06:50:31.599" endtime="20230310 06:50:51.625"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://h1[contains(text(), 'Trồng tre dụ cò về làm tổ ')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230310 06:50:51.625" endtime="20230310 06:50:51.646"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath://h1[contains(text(), 'Trồng tre dụ cò về làm tổ ')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230310 06:50:51.664" level="INFO">Element 'xpath://h1[contains(text(), 'Trồng tre dụ cò về làm tổ ')]' is displayed.</msg>
+<status status="PASS" starttime="20230310 06:50:51.647" endtime="20230310 06:50:51.664"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://h1[contains(text(), 'Trồng tre dụ cò về làm tổ ')]</arg>
+<arg>Trồng tre dụ cò về làm tổ</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230310 06:50:51.664" level="INFO">Verifying element 'xpath://h1[contains(text(), 'Trồng tre dụ cò về làm tổ ')]' contains exact text 'Trồng tre dụ cò về làm tổ'.</msg>
+<status status="PASS" starttime="20230310 06:50:51.664" endtime="20230310 06:50:51.682"/>
+</kw>
+<status status="PASS" starttime="20230310 06:50:11.472" endtime="20230310 06:50:51.682"/>
+</kw>
+<kw name="And I try to go forward to the next page">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>history.forward()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:50:51.683" level="INFO">Executing JavaScript:
+history.forward()
+Without any arguments.</msg>
+<status status="PASS" starttime="20230310 06:50:51.683" endtime="20230310 06:50:53.204"/>
+</kw>
+<status status="PASS" starttime="20230310 06:50:51.682" endtime="20230310 06:50:53.204"/>
+</kw>
+<kw name="Then I shall be able to go to the next page successfully">
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${titleOfNextPage}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20230310 06:50:53.225" level="INFO">${titleOfNextPage} = Tin kinh doanh: Thị trường, tài chính, kinh tế, doanh nghiệp - VnExpress Kinh Doanh</msg>
+<status status="PASS" starttime="20230310 06:50:53.205" endtime="20230310 06:50:53.225"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n"Title of the next page is: ${titleOfNextPage} "</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230310 06:50:53.226" endtime="20230310 06:50:53.226"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Tin kinh doanh: Thị trường, tài chính, kinh tế, doanh nghiệp - VnExpress Kinh Doanh</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230310 06:50:53.249" level="INFO">Page title is 'Tin kinh doanh: Thị trường, tài chính, kinh tế, doanh nghiệp - VnExpress Kinh Doanh'.</msg>
+<status status="PASS" starttime="20230310 06:50:53.227" endtime="20230310 06:50:53.249"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>Tin kinh doanh: Thị trường, tài chính, kinh tế, doanh nghiệp - VnExpress Kinh Doanh</arg>
+<arg>${titleOfNextPage}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:50:53.249" endtime="20230310 06:50:53.249"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>xpath://h1[contains(text(), 'Trồng tre dụ cò về làm tổ ')]</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20230310 06:50:53.249" endtime="20230310 06:51:13.258"/>
+</kw>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<arg>xpath://h1[contains(text(), 'Trồng tre dụ cò về làm tổ ')]</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<msg timestamp="20230310 06:51:33.265" level="INFO">Element 'xpath://h1[contains(text(), 'Trồng tre dụ cò về làm tổ ')]' did not exist.</msg>
+<status status="PASS" starttime="20230310 06:51:13.258" endtime="20230310 06:51:33.265"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath:(//a[contains(@title, 'Ebank')])[3]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230310 06:51:33.265" endtime="20230310 06:51:33.287"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath:(//a[contains(@title, 'Ebank')])[3]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230310 06:51:33.305" level="INFO">Element 'xpath:(//a[contains(@title, 'Ebank')])[3]' is displayed.</msg>
+<status status="PASS" starttime="20230310 06:51:33.287" endtime="20230310 06:51:33.305"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath:(//a[contains(@title, 'Ebank')])[3]</arg>
+<arg>Ebank</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230310 06:51:33.305" level="INFO">Verifying element 'xpath:(//a[contains(@title, 'Ebank')])[3]' contains exact text 'Ebank'.</msg>
+<status status="PASS" starttime="20230310 06:51:33.305" endtime="20230310 06:51:33.326"/>
+</kw>
+<status status="PASS" starttime="20230310 06:50:53.205" endtime="20230310 06:51:33.326"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230310 06:51:33.326" endtime="20230310 06:51:33.601"/>
+</kw>
+<kw name="Given I go to the given link https://vnexpress.net/trong-tre-du-co-ve-lam-to-4545196.html successfully to verify the article content">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230310 06:51:33.603" level="INFO">Opening browser 'chrome' to base url 'https://vnexpress.net/trong-tre-du-co-ve-lam-to-4545196.html'.</msg>
+<status status="PASS" starttime="20230310 06:51:33.602" endtime="20230310 06:51:39.384"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230310 06:51:39.384" endtime="20230310 06:51:39.883"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${titleOfCurrentPage}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20230310 06:51:39.887" level="INFO">${titleOfCurrentPage} = Trồng tre dụ cò về làm tổ - VnExpress</msg>
+<status status="PASS" starttime="20230310 06:51:39.883" endtime="20230310 06:51:39.887"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n"Title of current page is: ${titleOfCurrentPage} "</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230310 06:51:39.887" endtime="20230310 06:51:39.888"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Trồng tre dụ cò về làm tổ - VnExpress</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230310 06:51:39.891" level="INFO">Page title is 'Trồng tre dụ cò về làm tổ - VnExpress'.</msg>
+<status status="PASS" starttime="20230310 06:51:39.888" endtime="20230310 06:51:39.891"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>Trồng tre dụ cò về làm tổ - VnExpress</arg>
+<arg>${titleOfCurrentPage}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:39.891" endtime="20230310 06:51:39.891"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:33.602" endtime="20230310 06:51:39.891"/>
+</kw>
+<kw name="When I verify the title details of the article">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://h1[contains(text(), 'Trồng tre dụ cò về làm tổ ')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230310 06:51:39.892" endtime="20230310 06:51:39.918"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath://h1[contains(text(), 'Trồng tre dụ cò về làm tổ ')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230310 06:51:39.936" level="INFO">Element 'xpath://h1[contains(text(), 'Trồng tre dụ cò về làm tổ ')]' is displayed.</msg>
+<status status="PASS" starttime="20230310 06:51:39.918" endtime="20230310 06:51:39.936"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://h1[contains(text(), 'Trồng tre dụ cò về làm tổ ')]</arg>
+<arg>Trồng tre dụ cò về làm tổ</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230310 06:51:39.936" level="INFO">Verifying element 'xpath://h1[contains(text(), 'Trồng tre dụ cò về làm tổ ')]' contains exact text 'Trồng tre dụ cò về làm tổ'.</msg>
+<status status="PASS" starttime="20230310 06:51:39.936" endtime="20230310 06:51:39.955"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:39.892" endtime="20230310 06:51:39.955"/>
+</kw>
+<kw name="Then I will make sure that the title details of the article is displayed correctly">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${titleDetailsFontSize}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.page-detail .title-detail'))).getPropertyValue('font-size');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:39.956" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.page-detail .title-detail'))).getPropertyValue('font-size');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:39.960" level="INFO">${titleDetailsFontSize} = 32px</msg>
+<status status="PASS" starttime="20230310 06:51:39.956" endtime="20230310 06:51:39.960"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>32px</arg>
+<arg>${titleDetailsFontSize}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:39.960" endtime="20230310 06:51:39.961"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${titleDetailsFontFamily}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.page-detail .title-detail'))).getPropertyValue('font-family');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:39.961" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.page-detail .title-detail'))).getPropertyValue('font-family');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:39.965" level="INFO">${titleDetailsFontFamily} = Merriweather, serif</msg>
+<status status="PASS" starttime="20230310 06:51:39.961" endtime="20230310 06:51:39.965"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>Merriweather, serif</arg>
+<arg>${titleDetailsFontFamily}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:39.965" endtime="20230310 06:51:39.965"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${titleDetailsFontWeight}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.page-detail .title-detail'))).getPropertyValue('font-weight');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:39.966" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.page-detail .title-detail'))).getPropertyValue('font-weight');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:39.970" level="INFO">${titleDetailsFontWeight} = 700</msg>
+<status status="PASS" starttime="20230310 06:51:39.965" endtime="20230310 06:51:39.970"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>700</arg>
+<arg>${titleDetailsFontWeight}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:39.970" endtime="20230310 06:51:39.971"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${titleDetailsLineHeight}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.page-detail .title-detail'))).getPropertyValue('line-height');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:39.971" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.page-detail .title-detail'))).getPropertyValue('line-height');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:39.975" level="INFO">${titleDetailsLineHeight} = 48px</msg>
+<status status="PASS" starttime="20230310 06:51:39.971" endtime="20230310 06:51:39.975"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>48px</arg>
+<arg>${titleDetailsLineHeight}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:39.975" endtime="20230310 06:51:39.976"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${titleDetailsMarginBottom}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.page-detail .title-detail'))).getPropertyValue('margin-bottom');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:39.976" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.page-detail .title-detail'))).getPropertyValue('margin-bottom');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:39.980" level="INFO">${titleDetailsMarginBottom} = 15px</msg>
+<status status="PASS" starttime="20230310 06:51:39.976" endtime="20230310 06:51:39.980"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>15px</arg>
+<arg>${titleDetailsMarginBottom}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:39.981" endtime="20230310 06:51:39.981"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:39.955" endtime="20230310 06:51:39.981"/>
+</kw>
+<kw name="And I verify the description of the article">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://span[contains(text(), 'Thanh Hóa')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230310 06:51:39.981" endtime="20230310 06:51:40.027"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath://span[contains(text(), 'Thanh Hóa')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230310 06:51:40.042" level="INFO">Element 'xpath://span[contains(text(), 'Thanh Hóa')]' is displayed.</msg>
+<status status="PASS" starttime="20230310 06:51:40.028" endtime="20230310 06:51:40.043"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://span[contains(text(), 'Thanh Hóa')]</arg>
+<arg>THANH HÓA</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230310 06:51:40.043" level="INFO">Verifying element 'xpath://span[contains(text(), 'Thanh Hóa')]' contains exact text 'THANH HÓA'.</msg>
+<status status="PASS" starttime="20230310 06:51:40.043" endtime="20230310 06:51:40.141"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'description')])[1]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230310 06:51:40.142" endtime="20230310 06:51:40.174"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'description')])[1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230310 06:51:40.257" level="INFO">Element 'xpath:(//p[contains(@class, 'description')])[1]' is displayed.</msg>
+<status status="PASS" starttime="20230310 06:51:40.174" endtime="20230310 06:51:40.257"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'description')])[1]</arg>
+<arg>Thương đàn chim trời bị săn bắt, ông Mai Văn Quân thầu khu đầm hoang, thuê người trồng rừng làm nơi trú ngụ cho chúng.</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230310 06:51:40.304" level="INFO">Element 'xpath:(//p[contains(@class, 'description')])[1]' contains text 'Thương đàn chim trời bị săn bắt, ông Mai Văn Quân thầu khu đầm hoang, thuê người trồng rừng làm nơi trú ngụ cho chúng.'.</msg>
+<status status="PASS" starttime="20230310 06:51:40.258" endtime="20230310 06:51:40.304"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:39.981" endtime="20230310 06:51:40.304"/>
+</kw>
+<kw name="Then I will make sure that the description of the article is displayed correctly">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${locationStampColor}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.location-stamp'))).getPropertyValue('color');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:40.306" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.location-stamp'))).getPropertyValue('color');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:40.568" level="INFO">${locationStampColor} = rgb(117, 117, 117)</msg>
+<status status="PASS" starttime="20230310 06:51:40.306" endtime="20230310 06:51:40.568"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>rgb(117, 117, 117)</arg>
+<arg>${locationStampColor}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:40.568" endtime="20230310 06:51:40.569"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${locationStampTextTransform}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.location-stamp')),'::before').getPropertyValue('text-transform');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:40.569" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.location-stamp')),'::before').getPropertyValue('text-transform');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:40.574" level="INFO">${locationStampTextTransform} = uppercase</msg>
+<status status="PASS" starttime="20230310 06:51:40.569" endtime="20230310 06:51:40.574"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>uppercase</arg>
+<arg>${locationStampTextTransform}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:40.574" endtime="20230310 06:51:40.574"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${descriptionFontSize}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.page-detail .description'))).getPropertyValue('font-size');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:40.575" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.page-detail .description'))).getPropertyValue('font-size');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:40.579" level="INFO">${descriptionFontSize} = 18px</msg>
+<status status="PASS" starttime="20230310 06:51:40.574" endtime="20230310 06:51:40.579"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>18px</arg>
+<arg>${descriptionFontSize}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:40.580" endtime="20230310 06:51:40.580"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${descriptionFontWeight}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.page-detail .description'))).getPropertyValue('font-weight');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:40.582" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.page-detail .description'))).getPropertyValue('font-weight');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:40.586" level="INFO">${descriptionFontWeight} = 400</msg>
+<status status="PASS" starttime="20230310 06:51:40.580" endtime="20230310 06:51:40.586"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>400</arg>
+<arg>${descriptionFontWeight}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:40.586" endtime="20230310 06:51:40.586"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${titleDetailsLineHeight}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.page-detail .description'))).getPropertyValue('line-height');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:40.587" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.page-detail .description'))).getPropertyValue('line-height');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:40.590" level="INFO">${titleDetailsLineHeight} = 28.8px</msg>
+<status status="PASS" starttime="20230310 06:51:40.586" endtime="20230310 06:51:40.590"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>28.8px</arg>
+<arg>${titleDetailsLineHeight}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:40.591" endtime="20230310 06:51:40.591"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:40.304" endtime="20230310 06:51:40.591"/>
+</kw>
+<kw name="And I verify the CSS of all content of the article">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://article[contains(@class, 'fck_detail')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230310 06:51:40.591" endtime="20230310 06:51:40.642"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath://article[contains(@class, 'fck_detail')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230310 06:51:40.708" level="INFO">Element 'xpath://article[contains(@class, 'fck_detail')]' is displayed.</msg>
+<status status="PASS" starttime="20230310 06:51:40.643" endtime="20230310 06:51:40.708"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:40.591" endtime="20230310 06:51:40.708"/>
+</kw>
+<kw name="Then I will make sure that all content of the article is displayed correctly">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${articleTextColor}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.fck_detail'))).getPropertyValue('color');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:40.710" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.fck_detail'))).getPropertyValue('color');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:40.717" level="INFO">${articleTextColor} = rgb(34, 34, 34)</msg>
+<status status="PASS" starttime="20230310 06:51:40.709" endtime="20230310 06:51:40.717"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>rgb(34, 34, 34)</arg>
+<arg>${articleTextColor}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:40.717" endtime="20230310 06:51:40.717"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${articleTextWidth}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.fck_detail'))).getPropertyValue('width');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:40.718" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.fck_detail'))).getPropertyValue('width');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:40.724" level="INFO">${articleTextWidth} = 670px</msg>
+<status status="PASS" starttime="20230310 06:51:40.717" endtime="20230310 06:51:40.724"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>670px</arg>
+<arg>${articleTextWidth}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:40.724" endtime="20230310 06:51:40.724"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${articleTextLineHeight}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.fck_detail'))).getPropertyValue('line-height');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:40.725" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.fck_detail'))).getPropertyValue('line-height');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:40.731" level="INFO">${articleTextLineHeight} = 28.8px</msg>
+<status status="PASS" starttime="20230310 06:51:40.724" endtime="20230310 06:51:40.731"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>28.8px</arg>
+<arg>${articleTextLineHeight}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:40.731" endtime="20230310 06:51:40.731"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${articleTextFont}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.fck_detail'))).getPropertyValue('font');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:40.732" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.fck_detail'))).getPropertyValue('font');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:40.738" level="INFO">${articleTextFont} = 18px / 28.8px arial</msg>
+<status status="PASS" starttime="20230310 06:51:40.732" endtime="20230310 06:51:40.738"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>18px / 28.8px arial</arg>
+<arg>${articleTextFont}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:40.738" endtime="20230310 06:51:40.738"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${articleTextPosition}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.fck_detail'))).getPropertyValue('position');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:40.739" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.fck_detail'))).getPropertyValue('position');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:40.747" level="INFO">${articleTextPosition} = relative</msg>
+<status status="PASS" starttime="20230310 06:51:40.739" endtime="20230310 06:51:40.747"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>relative</arg>
+<arg>${articleTextPosition}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:40.747" endtime="20230310 06:51:40.748"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:40.708" endtime="20230310 06:51:40.748"/>
+</kw>
+<kw name="And I verify the first paragraph">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[1]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230310 06:51:40.748" endtime="20230310 06:51:41.040"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[1]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230310 06:51:41.040" endtime="20230310 06:51:41.055"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230310 06:51:41.069" level="INFO">Element 'xpath:(//p[contains(@class, 'Normal')])[1]' is displayed.</msg>
+<status status="PASS" starttime="20230310 06:51:41.055" endtime="20230310 06:51:41.069"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[1]</arg>
+<arg>Nhá nhem tối mỗi ngày, ông Quân, 60 tuổi, lại dạo quanh khu vườn của gia đình ở xã Hà Ngọc, huyện Hà Trung, để thăm đàn cò đang chao nghiêng trên những bụi tre. Thói quen này được ông duy trì hơn 10 năm qua. "Tôi coi đàn chim trời như bạn. Ngày nào không nhìn thấy chúng bay lượn, không được nghe tiếng ríu rít là thấy thiếu vắng, ăn không ngon miệng...", ông Quân tâm sự.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230310 06:51:41.069" level="INFO">Verifying element 'xpath:(//p[contains(@class, 'Normal')])[1]' contains exact text 'Nhá nhem tối mỗi ngày, ông Quân, 60 tuổi, lại dạo quanh khu vườn của gia đình ở xã Hà Ngọc, huyện Hà Trung, để thăm đàn cò đang chao nghiêng trên những bụi tre. Thói quen này được ông duy trì hơn 10 năm qua. "Tôi coi đàn chim trời như bạn. Ngày nào không nhìn thấy chúng bay lượn, không được nghe tiếng ríu rít là thấy thiếu vắng, ăn không ngon miệng...", ông Quân tâm sự.'.</msg>
+<status status="PASS" starttime="20230310 06:51:41.069" endtime="20230310 06:51:41.088"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:40.748" endtime="20230310 06:51:41.088"/>
+</kw>
+<kw name="Then I will make sure that the first paragraph is displayed correctly">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${firstParagraphLineHeight}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('line-height');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:41.089" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('line-height');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:41.093" level="INFO">${firstParagraphLineHeight} = 28.8px</msg>
+<status status="PASS" starttime="20230310 06:51:41.089" endtime="20230310 06:51:41.093"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>28.8px</arg>
+<arg>${firstParagraphLineHeight}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:41.093" endtime="20230310 06:51:41.094"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${firstParagraphTextRendering}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('text-rendering');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:41.094" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('text-rendering');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:41.099" level="INFO">${firstParagraphTextRendering} = optimizespeed</msg>
+<status status="PASS" starttime="20230310 06:51:41.094" endtime="20230310 06:51:41.099"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>optimizespeed</arg>
+<arg>${firstParagraphTextRendering}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:41.099" endtime="20230310 06:51:41.100"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:41.088" endtime="20230310 06:51:41.100"/>
+</kw>
+<kw name="And I verify the second paragraph">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[2]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230310 06:51:41.100" endtime="20230310 06:51:41.373"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[2]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230310 06:51:41.373" endtime="20230310 06:51:41.387"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[2]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230310 06:51:41.400" level="INFO">Element 'xpath:(//p[contains(@class, 'Normal')])[2]' is displayed.</msg>
+<status status="PASS" starttime="20230310 06:51:41.387" endtime="20230310 06:51:41.400"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[2]</arg>
+<arg>Từ nhỏ, ông Quân đã rất yêu thích các loài chim. Nhiều lần chứng kiến đàn chim hoang dã bị thợ săn giăng lưới hoặc bắn hạ mang đi bán thịt, ông bảo "rất xót xa, cần có hành động". Trong một lần về Hà Ngọc, thấy giữa cánh đồng hoang vu có nhiều loài cò bợ thường bay về trú ngụ, ông nảy sinh ý định biến nơi đây thành ngôi nhà cho lũ chim hoang đến ở.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230310 06:51:41.401" level="INFO">Verifying element 'xpath:(//p[contains(@class, 'Normal')])[2]' contains exact text 'Từ nhỏ, ông Quân đã rất yêu thích các loài chim. Nhiều lần chứng kiến đàn chim hoang dã bị thợ săn giăng lưới hoặc bắn hạ mang đi bán thịt, ông bảo "rất xót xa, cần có hành động". Trong một lần về Hà Ngọc, thấy giữa cánh đồng hoang vu có nhiều loài cò bợ thường bay về trú ngụ, ông nảy sinh ý định biến nơi đây thành ngôi nhà cho lũ chim hoang đến ở.'.</msg>
+<status status="PASS" starttime="20230310 06:51:41.401" endtime="20230310 06:51:41.419"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:41.100" endtime="20230310 06:51:41.419"/>
+</kw>
+<kw name="Then I will make sure that the second paragraph is displayed correctly">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${secondParagraphLineHeight}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('line-height');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:41.420" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('line-height');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:41.423" level="INFO">${secondParagraphLineHeight} = 28.8px</msg>
+<status status="PASS" starttime="20230310 06:51:41.420" endtime="20230310 06:51:41.423"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>28.8px</arg>
+<arg>${secondParagraphLineHeight}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:41.424" endtime="20230310 06:51:41.424"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${secondParagraphTextRendering}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('text-rendering');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:41.424" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('text-rendering');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:41.429" level="INFO">${secondParagraphTextRendering} = optimizespeed</msg>
+<status status="PASS" starttime="20230310 06:51:41.424" endtime="20230310 06:51:41.429"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>optimizespeed</arg>
+<arg>${secondParagraphTextRendering}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:41.429" endtime="20230310 06:51:41.429"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:41.419" endtime="20230310 06:51:41.430"/>
+</kw>
+<kw name="And I verify the third paragraph">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[3]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230310 06:51:41.430" endtime="20230310 06:51:41.737"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[3]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230310 06:51:41.737" endtime="20230310 06:51:41.756"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[3]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230310 06:51:41.773" level="INFO">Element 'xpath:(//p[contains(@class, 'Normal')])[3]' is displayed.</msg>
+<status status="PASS" starttime="20230310 06:51:41.757" endtime="20230310 06:51:41.774"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[3]</arg>
+<arg>Năm 2004, gia đình ông Quân nhận thầu khu đầm lầy 8 ha tại xã Hà Ngọc. Lúc đó cả vùng như bãi đất chết, chỉ có lau sậy mọc hoang, ít dấu chân người qua lại. Ông thuê người trồng 50 bụi tre, đào đất đắp đường, xây tường rào bao quanh nhằm bảo vệ đàn cò thoát nạn săn bắn.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230310 06:51:41.774" level="INFO">Verifying element 'xpath:(//p[contains(@class, 'Normal')])[3]' contains exact text 'Năm 2004, gia đình ông Quân nhận thầu khu đầm lầy 8 ha tại xã Hà Ngọc. Lúc đó cả vùng như bãi đất chết, chỉ có lau sậy mọc hoang, ít dấu chân người qua lại. Ông thuê người trồng 50 bụi tre, đào đất đắp đường, xây tường rào bao quanh nhằm bảo vệ đàn cò thoát nạn săn bắn.'.</msg>
+<status status="PASS" starttime="20230310 06:51:41.774" endtime="20230310 06:51:41.795"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:41.430" endtime="20230310 06:51:41.795"/>
+</kw>
+<kw name="Then I will make sure that the third paragraph is displayed correctly">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${thirdParagraphLineHeight}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('line-height');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:41.797" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('line-height');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:41.801" level="INFO">${thirdParagraphLineHeight} = 28.8px</msg>
+<status status="PASS" starttime="20230310 06:51:41.796" endtime="20230310 06:51:41.801"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>28.8px</arg>
+<arg>${thirdParagraphLineHeight}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:41.801" endtime="20230310 06:51:41.802"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${thirdParagraphTextRendering}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('text-rendering');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:41.802" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('text-rendering');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:41.806" level="INFO">${thirdParagraphTextRendering} = optimizespeed</msg>
+<status status="PASS" starttime="20230310 06:51:41.802" endtime="20230310 06:51:41.806"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>optimizespeed</arg>
+<arg>${thirdParagraphTextRendering}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:41.806" endtime="20230310 06:51:41.806"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:41.796" endtime="20230310 06:51:41.806"/>
+</kw>
+<kw name="And I verify the first picture">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath://img[contains(@alt, 'Cò đậu chi chít trên rặng tre mỗi buổi tối mùa đông. Ảnh: Lê Hoàng')]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230310 06:51:41.807" endtime="20230310 06:51:42.084"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://img[contains(@alt, 'Cò đậu chi chít trên rặng tre mỗi buổi tối mùa đông. Ảnh: Lê Hoàng')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230310 06:51:42.084" endtime="20230310 06:51:42.102"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>xpath://img[contains(@alt, 'Cò đậu chi chít trên rặng tre mỗi buổi tối mùa đông. Ảnh: Lê Hoàng')]</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230310 06:51:42.103" endtime="20230310 06:51:42.127"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath://img[contains(@alt, 'Cò đậu chi chít trên rặng tre mỗi buổi tối mùa đông. Ảnh: Lê Hoàng')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230310 06:51:42.142" level="INFO">Element 'xpath://img[contains(@alt, 'Cò đậu chi chít trên rặng tre mỗi buổi tối mùa đông. Ảnh: Lê Hoàng')]' is displayed.</msg>
+<status status="PASS" starttime="20230310 06:51:42.127" endtime="20230310 06:51:42.142"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>xpath://img[contains(@alt, 'Cò đậu chi chít trên rặng tre mỗi buổi tối mùa đông. Ảnh: Lê Hoàng')]</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230310 06:51:42.142" endtime="20230310 06:51:42.165"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://img[contains(@alt, 'Cò đậu chi chít trên rặng tre mỗi buổi tối mùa đông. Ảnh: Lê Hoàng')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230310 06:51:42.166" level="INFO">Clicking element 'xpath://img[contains(@alt, 'Cò đậu chi chít trên rặng tre mỗi buổi tối mùa đông. Ảnh: Lê Hoàng')]'.</msg>
+<status status="PASS" starttime="20230310 06:51:42.165" endtime="20230310 06:51:42.219"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://img[contains(@src, 'https://i1-vnexpress.vnecdn.net/2022/12/07/4-5848-1670385184.jpg?w=0&amp;h=0&amp;q=100&amp;dpr=2&amp;fit=crop&amp;s=0UzU_3uE2O2K6aFwSy_yAg')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230310 06:51:42.219" endtime="20230310 06:51:42.275"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath://img[contains(@src, 'https://i1-vnexpress.vnecdn.net/2022/12/07/4-5848-1670385184.jpg?w=0&amp;h=0&amp;q=100&amp;dpr=2&amp;fit=crop&amp;s=0UzU_3uE2O2K6aFwSy_yAg')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230310 06:51:42.292" level="INFO">Element 'xpath://img[contains(@src, 'https://i1-vnexpress.vnecdn.net/2022/12/07/4-5848-1670385184.jpg?w=0&amp;h=0&amp;q=100&amp;dpr=2&amp;fit=crop&amp;s=0UzU_3uE2O2K6aFwSy_yAg')]' is displayed.</msg>
+<status status="PASS" starttime="20230310 06:51:42.276" endtime="20230310 06:51:42.293"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Image')])[4]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230310 06:51:42.293" endtime="20230310 06:51:42.314"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Image')])[4]</arg>
+<arg>Cò đậu trên rặng tre mỗi buổi tối mùa đông. Ảnh:${SPACE}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230310 06:51:42.336" level="INFO">Element 'xpath:(//p[contains(@class, 'Image')])[4]' contains text 'Cò đậu trên rặng tre mỗi buổi tối mùa đông. Ảnh: '.</msg>
+<status status="PASS" starttime="20230310 06:51:42.314" endtime="20230310 06:51:42.336"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Image')])[4]</arg>
+<arg>Lê Hoàng</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230310 06:51:42.352" level="INFO">Element 'xpath:(//p[contains(@class, 'Image')])[4]' contains text 'Lê Hoàng'.</msg>
+<status status="PASS" starttime="20230310 06:51:42.336" endtime="20230310 06:51:42.352"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://span[contains(@class, 'close-zoom')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230310 06:51:42.352" endtime="20230310 06:51:42.371"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>xpath://span[contains(@class, 'close-zoom')]</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230310 06:51:42.372" endtime="20230310 06:51:42.395"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath://span[contains(@class, 'close-zoom')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230310 06:51:42.409" level="INFO">Element 'xpath://span[contains(@class, 'close-zoom')]' is displayed.</msg>
+<status status="PASS" starttime="20230310 06:51:42.395" endtime="20230310 06:51:42.409"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>xpath://span[contains(@class, 'close-zoom')]</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230310 06:51:42.410" endtime="20230310 06:51:42.428"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://span[contains(@class, 'close-zoom')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230310 06:51:42.429" level="INFO">Clicking element 'xpath://span[contains(@class, 'close-zoom')]'.</msg>
+<status status="PASS" starttime="20230310 06:51:42.429" endtime="20230310 06:51:42.477"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:41.806" endtime="20230310 06:51:42.477"/>
+</kw>
+<kw name="Then I will make sure that the first picture is displayed correctly">
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${firstPictureAlt}</var>
+<arg>xpath://img[contains(@alt, 'Cò đậu chi chít trên rặng tre mỗi buổi tối mùa đông. Ảnh: Lê Hoàng')]</arg>
+<arg>alt</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20230310 06:51:42.499" level="INFO">${firstPictureAlt} = Cò đậu chi chít trên rặng tre mỗi buổi tối mùa đông. Ảnh: Lê Hoàng</msg>
+<status status="PASS" starttime="20230310 06:51:42.478" endtime="20230310 06:51:42.499"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>Cò đậu chi chít trên rặng tre mỗi buổi tối mùa đông. Ảnh: Lê Hoàng</arg>
+<arg>${firstPictureAlt}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:42.499" endtime="20230310 06:51:42.499"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${firstPictureSrc}</var>
+<arg>xpath://img[contains(@alt, 'Cò đậu chi chít trên rặng tre mỗi buổi tối mùa đông. Ảnh: Lê Hoàng')]</arg>
+<arg>src</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20230310 06:51:42.515" level="INFO">${firstPictureSrc} = https://i1-vnexpress.vnecdn.net/2022/12/07/4-5848-1670385184.jpg?w=680&amp;h=0&amp;q=100&amp;dpr=1&amp;fit=crop&amp;s=JkSYsGzKWK1NvzgfSy5hXA</msg>
+<status status="PASS" starttime="20230310 06:51:42.499" endtime="20230310 06:51:42.515"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>https://i1-vnexpress.vnecdn.net/2022/12/07/4-5848-1670385184.jpg?w=680&amp;h=0&amp;q=100&amp;dpr=1&amp;fit=crop&amp;s=JkSYsGzKWK1NvzgfSy5hXA</arg>
+<arg>${firstPictureSrc}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:42.515" endtime="20230310 06:51:42.515"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${firstPictureDataSrc}</var>
+<arg>xpath://img[contains(@alt, 'Cò đậu chi chít trên rặng tre mỗi buổi tối mùa đông. Ảnh: Lê Hoàng')]</arg>
+<arg>data-src</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20230310 06:51:42.531" level="INFO">${firstPictureDataSrc} = https://i1-vnexpress.vnecdn.net/2022/12/07/4-5848-1670385184.jpg?w=680&amp;h=0&amp;q=100&amp;dpr=1&amp;fit=crop&amp;s=JkSYsGzKWK1NvzgfSy5hXA</msg>
+<status status="PASS" starttime="20230310 06:51:42.515" endtime="20230310 06:51:42.531"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>https://i1-vnexpress.vnecdn.net/2022/12/07/4-5848-1670385184.jpg?w=680&amp;h=0&amp;q=100&amp;dpr=1&amp;fit=crop&amp;s=JkSYsGzKWK1NvzgfSy5hXA</arg>
+<arg>${firstPictureDataSrc}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:42.531" endtime="20230310 06:51:42.532"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:42.477" endtime="20230310 06:51:42.532"/>
+</kw>
+<kw name="Then I verify the fourth paragraph">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[4]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230310 06:51:42.532" endtime="20230310 06:51:42.816"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[4]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230310 06:51:42.816" endtime="20230310 06:51:42.833"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[4]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230310 06:51:42.848" level="INFO">Element 'xpath:(//p[contains(@class, 'Normal')])[4]' is displayed.</msg>
+<status status="PASS" starttime="20230310 06:51:42.833" endtime="20230310 06:51:42.848"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[4]</arg>
+<arg>Tre mọc đến đâu, cò về trú ẩn đến đó. Đến năm 2014, được chính quyền giao thêm hơn 10 ha đất ở khu lân cận, ông Quân quy hoạch thành vùng chăn nuôi và trồng cây ăn quả, phần còn lại trồng tre, luồng cho cò trú ngụ.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230310 06:51:42.849" level="INFO">Verifying element 'xpath:(//p[contains(@class, 'Normal')])[4]' contains exact text 'Tre mọc đến đâu, cò về trú ẩn đến đó. Đến năm 2014, được chính quyền giao thêm hơn 10 ha đất ở khu lân cận, ông Quân quy hoạch thành vùng chăn nuôi và trồng cây ăn quả, phần còn lại trồng tre, luồng cho cò trú ngụ.'.</msg>
+<status status="PASS" starttime="20230310 06:51:42.848" endtime="20230310 06:51:42.866"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:42.532" endtime="20230310 06:51:42.866"/>
+</kw>
+<kw name="And I will make sure that the fourth paragraph is displayed correctly">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${fourthParagraphLineHeight}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('line-height');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:42.868" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('line-height');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:42.871" level="INFO">${fourthParagraphLineHeight} = 28.8px</msg>
+<status status="PASS" starttime="20230310 06:51:42.867" endtime="20230310 06:51:42.871"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>28.8px</arg>
+<arg>${fourthParagraphLineHeight}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:42.871" endtime="20230310 06:51:42.872"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${fourthParagraphTextRendering}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('text-rendering');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:42.872" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('text-rendering');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:42.875" level="INFO">${fourthParagraphTextRendering} = optimizespeed</msg>
+<status status="PASS" starttime="20230310 06:51:42.872" endtime="20230310 06:51:42.875"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>optimizespeed</arg>
+<arg>${fourthParagraphTextRendering}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:42.875" endtime="20230310 06:51:42.876"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:42.867" endtime="20230310 06:51:42.876"/>
+</kw>
+<kw name="Then I verify the fifth paragraph">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[5]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230310 06:51:42.876" endtime="20230310 06:51:43.150"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[5]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230310 06:51:43.151" endtime="20230310 06:51:43.168"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[5]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230310 06:51:43.182" level="INFO">Element 'xpath:(//p[contains(@class, 'Normal')])[5]' is displayed.</msg>
+<status status="PASS" starttime="20230310 06:51:43.168" endtime="20230310 06:51:43.182"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[5]</arg>
+<arg>"Nhiều người bảo tôi khùng, nhưng tôi cứ làm với tất cả đam mê...", ông chủ vườn cò chia sẻ. Hiện số lượng cò làm tổ, sinh nở trong khu vườn của gia đình ông Quân lên tới hàng chục nghìn con. Ngoài các loài cò lửa, cò nhện còn có bồ nông, sáo sậu, bìm bịp...</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230310 06:51:43.182" level="INFO">Verifying element 'xpath:(//p[contains(@class, 'Normal')])[5]' contains exact text '"Nhiều người bảo tôi khùng, nhưng tôi cứ làm với tất cả đam mê...", ông chủ vườn cò chia sẻ. Hiện số lượng cò làm tổ, sinh nở trong khu vườn của gia đình ông Quân lên tới hàng chục nghìn con. Ngoài các loài cò lửa, cò nhện còn có bồ nông, sáo sậu, bìm bịp...'.</msg>
+<status status="PASS" starttime="20230310 06:51:43.182" endtime="20230310 06:51:43.200"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:42.876" endtime="20230310 06:51:43.201"/>
+</kw>
+<kw name="And I will make sure that the fifth paragraph is displayed correctly">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${fifthParagraphLineHeight}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('line-height');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:43.202" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('line-height');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:43.205" level="INFO">${fifthParagraphLineHeight} = 28.8px</msg>
+<status status="PASS" starttime="20230310 06:51:43.201" endtime="20230310 06:51:43.205"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>28.8px</arg>
+<arg>${fifthParagraphLineHeight}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:43.205" endtime="20230310 06:51:43.206"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${fifthParagraphTextRendering}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('text-rendering');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:43.206" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('text-rendering');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:43.209" level="INFO">${fifthParagraphTextRendering} = optimizespeed</msg>
+<status status="PASS" starttime="20230310 06:51:43.206" endtime="20230310 06:51:43.209"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>optimizespeed</arg>
+<arg>${fifthParagraphTextRendering}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:43.209" endtime="20230310 06:51:43.210"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:43.201" endtime="20230310 06:51:43.210"/>
+</kw>
+<kw name="And I verify the second picture">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath://img[contains(@alt, 'Ông Mai Văn Quân. Ảnh: Lê Hoàng')]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230310 06:51:43.210" endtime="20230310 06:51:43.491"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://img[contains(@alt, 'Ông Mai Văn Quân. Ảnh: Lê Hoàng')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230310 06:51:43.491" endtime="20230310 06:51:43.511"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>xpath://img[contains(@alt, 'Ông Mai Văn Quân. Ảnh: Lê Hoàng')]</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230310 06:51:43.512" endtime="20230310 06:51:43.624"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath://img[contains(@alt, 'Ông Mai Văn Quân. Ảnh: Lê Hoàng')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230310 06:51:43.658" level="INFO">Element 'xpath://img[contains(@alt, 'Ông Mai Văn Quân. Ảnh: Lê Hoàng')]' is displayed.</msg>
+<status status="PASS" starttime="20230310 06:51:43.625" endtime="20230310 06:51:43.659"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>xpath://img[contains(@alt, 'Ông Mai Văn Quân. Ảnh: Lê Hoàng')]</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230310 06:51:43.659" endtime="20230310 06:51:43.684"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://img[contains(@alt, 'Ông Mai Văn Quân. Ảnh: Lê Hoàng')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230310 06:51:43.684" level="INFO">Clicking element 'xpath://img[contains(@alt, 'Ông Mai Văn Quân. Ảnh: Lê Hoàng')]'.</msg>
+<status status="PASS" starttime="20230310 06:51:43.684" endtime="20230310 06:51:43.738"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://img[contains(@src, 'https://i1-vnexpress.vnecdn.net/2022/12/07/5-2599-1670385184.jpg?w=0&amp;h=0&amp;q=100&amp;dpr=2&amp;fit=crop&amp;s=uZG2aRLpGD1I2HVGv61XwQ')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230310 06:51:43.738" endtime="20230310 06:51:43.766"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath://img[contains(@src, 'https://i1-vnexpress.vnecdn.net/2022/12/07/5-2599-1670385184.jpg?w=0&amp;h=0&amp;q=100&amp;dpr=2&amp;fit=crop&amp;s=uZG2aRLpGD1I2HVGv61XwQ')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230310 06:51:43.782" level="INFO">Element 'xpath://img[contains(@src, 'https://i1-vnexpress.vnecdn.net/2022/12/07/5-2599-1670385184.jpg?w=0&amp;h=0&amp;q=100&amp;dpr=2&amp;fit=crop&amp;s=uZG2aRLpGD1I2HVGv61XwQ')]' is displayed.</msg>
+<status status="PASS" starttime="20230310 06:51:43.766" endtime="20230310 06:51:43.782"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Image')])[4]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230310 06:51:43.782" endtime="20230310 06:51:43.800"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Image')])[4]</arg>
+<arg>Ông Mai Văn Quân. Ảnh:</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230310 06:51:43.822" level="INFO">Element 'xpath:(//p[contains(@class, 'Image')])[4]' contains text 'Ông Mai Văn Quân. Ảnh:'.</msg>
+<status status="PASS" starttime="20230310 06:51:43.801" endtime="20230310 06:51:43.822"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Image')])[4]</arg>
+<arg>${SPACE}Lê Hoàng</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230310 06:51:43.839" level="INFO">Element 'xpath:(//p[contains(@class, 'Image')])[4]' contains text ' Lê Hoàng'.</msg>
+<status status="PASS" starttime="20230310 06:51:43.822" endtime="20230310 06:51:43.839"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://span[contains(@class, 'close-zoom')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230310 06:51:43.839" endtime="20230310 06:51:43.874"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>xpath://span[contains(@class, 'close-zoom')]</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230310 06:51:43.874" endtime="20230310 06:51:43.894"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath://span[contains(@class, 'close-zoom')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230310 06:51:43.910" level="INFO">Element 'xpath://span[contains(@class, 'close-zoom')]' is displayed.</msg>
+<status status="PASS" starttime="20230310 06:51:43.894" endtime="20230310 06:51:43.911"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>xpath://span[contains(@class, 'close-zoom')]</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230310 06:51:43.911" endtime="20230310 06:51:43.931"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://span[contains(@class, 'close-zoom')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230310 06:51:43.932" level="INFO">Clicking element 'xpath://span[contains(@class, 'close-zoom')]'.</msg>
+<status status="PASS" starttime="20230310 06:51:43.931" endtime="20230310 06:51:43.991"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:43.210" endtime="20230310 06:51:43.991"/>
+</kw>
+<kw name="Then I will make sure that the second picture is displayed correctly">
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${secondPictureAlt}</var>
+<arg>xpath://img[contains(@alt, 'Ông Mai Văn Quân. Ảnh: Lê Hoàng')]</arg>
+<arg>alt</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20230310 06:51:44.008" level="INFO">${secondPictureAlt} = Ông Mai Văn Quân. Ảnh: Lê Hoàng</msg>
+<status status="PASS" starttime="20230310 06:51:43.991" endtime="20230310 06:51:44.008"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>Ông Mai Văn Quân. Ảnh: Lê Hoàng</arg>
+<arg>${secondPictureAlt}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:44.008" endtime="20230310 06:51:44.009"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${secondPictureSrc}</var>
+<arg>xpath://img[contains(@alt, 'Cò đậu chi chít trên rặng tre mỗi buổi tối mùa đông. Ảnh: Lê Hoàng')]</arg>
+<arg>src</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20230310 06:51:44.024" level="INFO">${secondPictureSrc} = https://i1-vnexpress.vnecdn.net/2022/12/07/4-5848-1670385184.jpg?w=680&amp;h=0&amp;q=100&amp;dpr=1&amp;fit=crop&amp;s=JkSYsGzKWK1NvzgfSy5hXA</msg>
+<status status="PASS" starttime="20230310 06:51:44.009" endtime="20230310 06:51:44.024"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>https://i1-vnexpress.vnecdn.net/2022/12/07/4-5848-1670385184.jpg?w=680&amp;h=0&amp;q=100&amp;dpr=1&amp;fit=crop&amp;s=JkSYsGzKWK1NvzgfSy5hXA</arg>
+<arg>${secondPictureSrc}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:44.024" endtime="20230310 06:51:44.025"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${secondPictureDataSrc}</var>
+<arg>xpath://img[contains(@alt, 'Cò đậu chi chít trên rặng tre mỗi buổi tối mùa đông. Ảnh: Lê Hoàng')]</arg>
+<arg>data-src</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20230310 06:51:44.039" level="INFO">${secondPictureDataSrc} = https://i1-vnexpress.vnecdn.net/2022/12/07/4-5848-1670385184.jpg?w=680&amp;h=0&amp;q=100&amp;dpr=1&amp;fit=crop&amp;s=JkSYsGzKWK1NvzgfSy5hXA</msg>
+<status status="PASS" starttime="20230310 06:51:44.025" endtime="20230310 06:51:44.039"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>https://i1-vnexpress.vnecdn.net/2022/12/07/4-5848-1670385184.jpg?w=680&amp;h=0&amp;q=100&amp;dpr=1&amp;fit=crop&amp;s=JkSYsGzKWK1NvzgfSy5hXA</arg>
+<arg>${secondPictureDataSrc}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:44.040" endtime="20230310 06:51:44.040"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:43.991" endtime="20230310 06:51:44.040"/>
+</kw>
+<kw name="Then I verify the sixth paragraph">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[6]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230310 06:51:44.041" endtime="20230310 06:51:44.318"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[6]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230310 06:51:44.319" endtime="20230310 06:51:44.333"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[6]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230310 06:51:44.348" level="INFO">Element 'xpath:(//p[contains(@class, 'Normal')])[6]' is displayed.</msg>
+<status status="PASS" starttime="20230310 06:51:44.334" endtime="20230310 06:51:44.348"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[6]</arg>
+<arg>"Mừng là mỗi năm cò về càng nhiều, chứng tỏ đất lành chim đậu. Mỗi lần vào ngắm đồi cò, tôi cảm thấy sức khỏe tốt hơn lên và cảm nhận rõ hơn sự nhỏ bé của mình trước thiên nhiên...", ông Quân chia sẻ.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230310 06:51:44.348" level="INFO">Verifying element 'xpath:(//p[contains(@class, 'Normal')])[6]' contains exact text '"Mừng là mỗi năm cò về càng nhiều, chứng tỏ đất lành chim đậu. Mỗi lần vào ngắm đồi cò, tôi cảm thấy sức khỏe tốt hơn lên và cảm nhận rõ hơn sự nhỏ bé của mình trước thiên nhiên...", ông Quân chia sẻ.'.</msg>
+<status status="PASS" starttime="20230310 06:51:44.348" endtime="20230310 06:51:44.365"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:44.041" endtime="20230310 06:51:44.365"/>
+</kw>
+<kw name="And I will make sure that the sixth paragraph is displayed correctly">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${sixthParagraphLineHeight}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('line-height');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:44.366" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('line-height');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:44.370" level="INFO">${sixthParagraphLineHeight} = 28.8px</msg>
+<status status="PASS" starttime="20230310 06:51:44.366" endtime="20230310 06:51:44.370"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>28.8px</arg>
+<arg>${sixthParagraphLineHeight}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:44.371" endtime="20230310 06:51:44.371"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${sixthParagraphTextRendering}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('text-rendering');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:44.371" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('text-rendering');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:44.375" level="INFO">${sixthParagraphTextRendering} = optimizespeed</msg>
+<status status="PASS" starttime="20230310 06:51:44.371" endtime="20230310 06:51:44.375"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>optimizespeed</arg>
+<arg>${sixthParagraphTextRendering}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:44.375" endtime="20230310 06:51:44.376"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:44.366" endtime="20230310 06:51:44.376"/>
+</kw>
+<kw name="Then I verify the seventh paragraph">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[7]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230310 06:51:44.376" endtime="20230310 06:51:44.666"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[7]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230310 06:51:44.667" endtime="20230310 06:51:44.681"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[7]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230310 06:51:44.695" level="INFO">Element 'xpath:(//p[contains(@class, 'Normal')])[7]' is displayed.</msg>
+<status status="PASS" starttime="20230310 06:51:44.681" endtime="20230310 06:51:44.695"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[7]</arg>
+<arg>Từ khi gần gũi với vườn cò, ông Quân yêu cầu gia đình không mua hay sử dụng thịt chim trời. Có lần vài người bạn mời ăn thịt chim đặc sản, ông khước từ giận dữ vì "tưởng tượng như lũ chim ở nhà bị bắn chết khi bay xa kiếm ăn...".</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230310 06:51:44.696" level="INFO">Verifying element 'xpath:(//p[contains(@class, 'Normal')])[7]' contains exact text 'Từ khi gần gũi với vườn cò, ông Quân yêu cầu gia đình không mua hay sử dụng thịt chim trời. Có lần vài người bạn mời ăn thịt chim đặc sản, ông khước từ giận dữ vì "tưởng tượng như lũ chim ở nhà bị bắn chết khi bay xa kiếm ăn...".'.</msg>
+<status status="PASS" starttime="20230310 06:51:44.695" endtime="20230310 06:51:44.715"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:44.376" endtime="20230310 06:51:44.715"/>
+</kw>
+<kw name="And I will make sure that the seventh paragraph is displayed correctly">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${seventhParagraphLineHeight}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('line-height');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:44.716" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('line-height');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:44.720" level="INFO">${seventhParagraphLineHeight} = 28.8px</msg>
+<status status="PASS" starttime="20230310 06:51:44.715" endtime="20230310 06:51:44.720"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>28.8px</arg>
+<arg>${seventhParagraphLineHeight}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:44.720" endtime="20230310 06:51:44.721"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${seventhParagraphTextRendering}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('text-rendering');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:44.727" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('text-rendering');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:44.731" level="INFO">${seventhParagraphTextRendering} = optimizespeed</msg>
+<status status="PASS" starttime="20230310 06:51:44.721" endtime="20230310 06:51:44.731"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>optimizespeed</arg>
+<arg>${seventhParagraphTextRendering}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:44.731" endtime="20230310 06:51:44.732"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:44.715" endtime="20230310 06:51:44.732"/>
+</kw>
+<kw name="Then I verify the eighth paragraph">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[8]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230310 06:51:44.732" endtime="20230310 06:51:45.015"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[8]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230310 06:51:45.015" endtime="20230310 06:51:45.029"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[8]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230310 06:51:45.043" level="INFO">Element 'xpath:(//p[contains(@class, 'Normal')])[8]' is displayed.</msg>
+<status status="PASS" starttime="20230310 06:51:45.029" endtime="20230310 06:51:45.043"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[8]</arg>
+<arg>Để bảo vệ đàn chim, ông Quân còn thuê nhiều nhân công vừa chăm sóc cây trồng vừa canh chừng không cho người lạ săn bắn. Bà Bùi Thị Thắm, công nhân trong trang trại, cho hay hàng ngày đi kiểm tra xem chim cò bị thương hay không. Con nào bị dính bẫy lưới thì gỡ, những con bị bệnh chết thì đem chôn, rảnh thì bà dùng dao phát quang cây bụi cho chim lấy chỗ làm tổ, sinh nở.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230310 06:51:45.044" level="INFO">Verifying element 'xpath:(//p[contains(@class, 'Normal')])[8]' contains exact text 'Để bảo vệ đàn chim, ông Quân còn thuê nhiều nhân công vừa chăm sóc cây trồng vừa canh chừng không cho người lạ săn bắn. Bà Bùi Thị Thắm, công nhân trong trang trại, cho hay hàng ngày đi kiểm tra xem chim cò bị thương hay không. Con nào bị dính bẫy lưới thì gỡ, những con bị bệnh chết thì đem chôn, rảnh thì bà dùng dao phát quang cây bụi cho chim lấy chỗ làm tổ, sinh nở.'.</msg>
+<status status="PASS" starttime="20230310 06:51:45.043" endtime="20230310 06:51:45.063"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:44.732" endtime="20230310 06:51:45.063"/>
+</kw>
+<kw name="And I will make sure that the eighth paragraph is displayed correctly">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${eighthParagraphLineHeight}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('line-height');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:45.064" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('line-height');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:45.067" level="INFO">${eighthParagraphLineHeight} = 28.8px</msg>
+<status status="PASS" starttime="20230310 06:51:45.063" endtime="20230310 06:51:45.067"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>28.8px</arg>
+<arg>${eighthParagraphLineHeight}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:45.068" endtime="20230310 06:51:45.068"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${eighthParagraphTextRendering}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('text-rendering');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:45.068" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('text-rendering');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:45.072" level="INFO">${eighthParagraphTextRendering} = optimizespeed</msg>
+<status status="PASS" starttime="20230310 06:51:45.068" endtime="20230310 06:51:45.072"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>optimizespeed</arg>
+<arg>${eighthParagraphTextRendering}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:45.072" endtime="20230310 06:51:45.072"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:45.063" endtime="20230310 06:51:45.072"/>
+</kw>
+<kw name="Then I verify the video in the article">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Image')])[3]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230310 06:51:45.073" endtime="20230310 06:51:45.428"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Image')])[3]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230310 06:51:45.428" endtime="20230310 06:51:45.446"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Image')])[3]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230310 06:51:45.461" level="INFO">Element 'xpath:(//p[contains(@class, 'Image')])[3]' is displayed.</msg>
+<status status="PASS" starttime="20230310 06:51:45.446" endtime="20230310 06:51:45.461"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Image')])[3]</arg>
+<arg>Đàn cò bay lượn trên khu rừng của ông Quân. Video: Lê Hoàng</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230310 06:51:45.483" level="INFO">Element 'xpath:(//p[contains(@class, 'Image')])[3]' contains text 'Đàn cò bay lượn trên khu rừng của ông Quân. Video: Lê Hoàng'.</msg>
+<status status="PASS" starttime="20230310 06:51:45.461" endtime="20230310 06:51:45.483"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://button[contains(@class, 'vjs-big-play-button')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230310 06:51:45.483" endtime="20230310 06:51:45.507"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>xpath://button[contains(@class, 'vjs-big-play-button')]</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230310 06:51:45.507" endtime="20230310 06:51:45.538"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath://button[contains(@class, 'vjs-big-play-button')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230310 06:51:45.560" level="INFO">Element 'xpath://button[contains(@class, 'vjs-big-play-button')]' is displayed.</msg>
+<status status="PASS" starttime="20230310 06:51:45.538" endtime="20230310 06:51:45.560"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>xpath://button[contains(@class, 'vjs-big-play-button')]</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230310 06:51:45.560" endtime="20230310 06:51:45.583"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:45.072" endtime="20230310 06:51:45.583"/>
+</kw>
+<kw name="And I will make sure that the video in the article is worked correctly">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://button[contains(@class, 'vjs-big-play-button')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230310 06:51:45.584" level="INFO">Clicking element 'xpath://button[contains(@class, 'vjs-big-play-button')]'.</msg>
+<status status="PASS" starttime="20230310 06:51:45.584" endtime="20230310 06:51:45.637"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://span[contains(text(), '0:50')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230310 06:51:45.637" endtime="20230310 06:51:45.663"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath://span[contains(text(), '0:50')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230310 06:51:45.683" level="INFO">Element 'xpath://span[contains(text(), '0:50')]' is displayed.</msg>
+<status status="PASS" starttime="20230310 06:51:45.664" endtime="20230310 06:51:45.683"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://span[contains(text(), '0:50')]</arg>
+<arg>0:50</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230310 06:51:45.683" level="INFO">Verifying element 'xpath://span[contains(text(), '0:50')]' contains exact text '0:50'.</msg>
+<status status="PASS" starttime="20230310 06:51:45.683" endtime="20230310 06:51:45.704"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230310 06:51:50.705" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230310 06:51:45.704" endtime="20230310 06:51:50.705"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://button[contains(@class, 'vjs-big-play-button')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230310 06:51:50.706" level="INFO">Clicking element 'xpath://button[contains(@class, 'vjs-big-play-button')]'.</msg>
+<status status="PASS" starttime="20230310 06:51:50.706" endtime="20230310 06:51:50.765"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:45.583" endtime="20230310 06:51:50.766"/>
+</kw>
+<kw name="Then I verify the nineth paragraph">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[9]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230310 06:51:50.766" endtime="20230310 06:51:51.053"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[9]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230310 06:51:51.053" endtime="20230310 06:51:51.071"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[9]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230310 06:51:51.087" level="INFO">Element 'xpath:(//p[contains(@class, 'Normal')])[9]' is displayed.</msg>
+<status status="PASS" starttime="20230310 06:51:51.071" endtime="20230310 06:51:51.087"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[9]</arg>
+<arg>Vợ ông Quân, bà Vi Thị Mai Lam, cho biết gia đình ủng hộ việc chồng dành đất trồng cây, đắp bờ cho chim trời về trú ngụ. "Ông ấy dành cả tâm huyết cho đảo cò, có khi bận rộn chăm cò còn hơn việc nhà...", bà Lam nói.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230310 06:51:51.088" level="INFO">Verifying element 'xpath:(//p[contains(@class, 'Normal')])[9]' contains exact text 'Vợ ông Quân, bà Vi Thị Mai Lam, cho biết gia đình ủng hộ việc chồng dành đất trồng cây, đắp bờ cho chim trời về trú ngụ. "Ông ấy dành cả tâm huyết cho đảo cò, có khi bận rộn chăm cò còn hơn việc nhà...", bà Lam nói.'.</msg>
+<status status="PASS" starttime="20230310 06:51:51.088" endtime="20230310 06:51:51.106"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:50.766" endtime="20230310 06:51:51.106"/>
+</kw>
+<kw name="And I will make sure that the nineth paragraph is displayed correctly">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${ninethParagraphLineHeight}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('line-height');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:51.108" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('line-height');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:51.111" level="INFO">${ninethParagraphLineHeight} = 28.8px</msg>
+<status status="PASS" starttime="20230310 06:51:51.107" endtime="20230310 06:51:51.111"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>28.8px</arg>
+<arg>${ninethParagraphLineHeight}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:51.111" endtime="20230310 06:51:51.112"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${ninethParagraphTextRendering}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('text-rendering');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:51.112" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('text-rendering');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:51.117" level="INFO">${ninethParagraphTextRendering} = optimizespeed</msg>
+<status status="PASS" starttime="20230310 06:51:51.112" endtime="20230310 06:51:51.117"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>optimizespeed</arg>
+<arg>${ninethParagraphTextRendering}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:51.118" endtime="20230310 06:51:51.118"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:51.107" endtime="20230310 06:51:51.118"/>
+</kw>
+<kw name="Then I verify the tenth paragraph">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[10]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230310 06:51:51.119" endtime="20230310 06:51:51.401"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[10]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230310 06:51:51.401" endtime="20230310 06:51:51.419"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[10]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230310 06:51:51.434" level="INFO">Element 'xpath:(//p[contains(@class, 'Normal')])[10]' is displayed.</msg>
+<status status="PASS" starttime="20230310 06:51:51.419" endtime="20230310 06:51:51.434"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[10]</arg>
+<arg>Nói về dự định tương lai, ông Quân cho hay sẽ tiếp tục bảo vệ đàn cò và định hướng phát triển nơi đây thành khu du lịch sinh thái gần gũi với thiên nhiên, giúp nâng cao ý thức bảo vệ môi trường trong cộng đồng.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230310 06:51:51.434" level="INFO">Verifying element 'xpath:(//p[contains(@class, 'Normal')])[10]' contains exact text 'Nói về dự định tương lai, ông Quân cho hay sẽ tiếp tục bảo vệ đàn cò và định hướng phát triển nơi đây thành khu du lịch sinh thái gần gũi với thiên nhiên, giúp nâng cao ý thức bảo vệ môi trường trong cộng đồng.'.</msg>
+<status status="PASS" starttime="20230310 06:51:51.434" endtime="20230310 06:51:51.455"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:51.118" endtime="20230310 06:51:51.455"/>
+</kw>
+<kw name="And I will make sure that the tenth paragraph is displayed correctly">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${tenthParagraphLineHeight}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('line-height');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:51.456" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('line-height');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:51.460" level="INFO">${tenthParagraphLineHeight} = 28.8px</msg>
+<status status="PASS" starttime="20230310 06:51:51.456" endtime="20230310 06:51:51.460"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>28.8px</arg>
+<arg>${tenthParagraphLineHeight}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:51.460" endtime="20230310 06:51:51.460"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${tenthParagraphTextRendering}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('text-rendering');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:51.461" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('text-rendering');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:51.466" level="INFO">${tenthParagraphTextRendering} = optimizespeed</msg>
+<status status="PASS" starttime="20230310 06:51:51.461" endtime="20230310 06:51:51.466"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>optimizespeed</arg>
+<arg>${tenthParagraphTextRendering}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:51.466" endtime="20230310 06:51:51.466"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:51.455" endtime="20230310 06:51:51.466"/>
+</kw>
+<kw name="Then I verify the eleventh paragraph">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[11]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230310 06:51:51.467" endtime="20230310 06:51:51.749"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[11]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230310 06:51:51.750" endtime="20230310 06:51:51.766"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[11]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230310 06:51:51.782" level="INFO">Element 'xpath:(//p[contains(@class, 'Normal')])[11]' is displayed.</msg>
+<status status="PASS" starttime="20230310 06:51:51.767" endtime="20230310 06:51:51.783"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath:(//p[contains(@class, 'Normal')])[11]</arg>
+<arg>Đánh giá cao mô hình trang trại và hành động bảo vệ các loài chim hoang dã của ông Quân, ông Nguyễn Minh Tấn, Chủ tịch xã Hà Ngọc, cho biết đây là vườn cò duy nhất ở huyện Hà Trung nên rất cần được bảo tồn và nhân rộng. Chính quyền đang xem xét, tạo điều kiện để thành lập khu du lịch sinh thái ở nơi này nhằm phát huy hơn nữa giá trị của vùng đất.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230310 06:51:51.783" level="INFO">Verifying element 'xpath:(//p[contains(@class, 'Normal')])[11]' contains exact text 'Đánh giá cao mô hình trang trại và hành động bảo vệ các loài chim hoang dã của ông Quân, ông Nguyễn Minh Tấn, Chủ tịch xã Hà Ngọc, cho biết đây là vườn cò duy nhất ở huyện Hà Trung nên rất cần được bảo tồn và nhân rộng. Chính quyền đang xem xét, tạo điều kiện để thành lập khu du lịch sinh thái ở nơi này nhằm phát huy hơn nữa giá trị của vùng đất.'.</msg>
+<status status="PASS" starttime="20230310 06:51:51.783" endtime="20230310 06:51:51.803"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:51.466" endtime="20230310 06:51:51.803"/>
+</kw>
+<kw name="And I will make sure that the eleventh paragraph is displayed correctly">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${eleventhParagraphLineHeight}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('line-height');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:51.804" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('line-height');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:51.808" level="INFO">${eleventhParagraphLineHeight} = 28.8px</msg>
+<status status="PASS" starttime="20230310 06:51:51.804" endtime="20230310 06:51:51.808"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>28.8px</arg>
+<arg>${eleventhParagraphLineHeight}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:51.808" endtime="20230310 06:51:51.808"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${eleventhParagraphTextRendering}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('text-rendering');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:51.809" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.fck_detail .Normal, .fck_detail p'))).getPropertyValue('text-rendering');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:51.816" level="INFO">${eleventhParagraphTextRendering} = optimizespeed</msg>
+<status status="PASS" starttime="20230310 06:51:51.809" endtime="20230310 06:51:51.816"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>optimizespeed</arg>
+<arg>${eleventhParagraphTextRendering}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:51.816" endtime="20230310 06:51:51.816"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:51.803" endtime="20230310 06:51:51.816"/>
+</kw>
+<kw name="Then I verify the author name">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath://p[contains(@class, 'author_mail')]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230310 06:51:51.817" endtime="20230310 06:51:52.100"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://p[contains(@class, 'author_mail')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230310 06:51:52.100" endtime="20230310 06:51:52.118"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath://p[contains(@class, 'author_mail')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230310 06:51:52.133" level="INFO">Element 'xpath://p[contains(@class, 'author_mail')]' is displayed.</msg>
+<status status="PASS" starttime="20230310 06:51:52.118" endtime="20230310 06:51:52.133"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://p[contains(@class, 'author_mail')]</arg>
+<arg>Lê Hoàng</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230310 06:51:52.134" level="INFO">Verifying element 'xpath://p[contains(@class, 'author_mail')]' contains exact text 'Lê Hoàng'.</msg>
+<status status="PASS" starttime="20230310 06:51:52.133" endtime="20230310 06:51:52.155"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:51.816" endtime="20230310 06:51:52.155"/>
+</kw>
+<kw name="And I will make sure that the author name is displayed correctly">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${authorNameFontSize}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.page-detail .author, .page-detail .author_mail'))).getPropertyValue('font-size');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:52.156" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.page-detail .author, .page-detail .author_mail'))).getPropertyValue('font-size');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:52.161" level="INFO">${authorNameFontSize} = 18px</msg>
+<status status="PASS" starttime="20230310 06:51:52.155" endtime="20230310 06:51:52.161"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>18px</arg>
+<arg>${authorNameFontSize}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:52.161" endtime="20230310 06:51:52.162"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${authorNameTextAlign}</var>
+<arg>return window.getComputedStyle(document.querySelector(('.page-detail .author, .page-detail .author_mail'))).getPropertyValue('text-align');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230310 06:51:52.162" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector(('.page-detail .author, .page-detail .author_mail'))).getPropertyValue('text-align');
+Without any arguments.</msg>
+<msg timestamp="20230310 06:51:52.167" level="INFO">${authorNameTextAlign} = right</msg>
+<status status="PASS" starttime="20230310 06:51:52.162" endtime="20230310 06:51:52.167"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>right</arg>
+<arg>${authorNameTextAlign}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230310 06:51:52.167" endtime="20230310 06:51:52.168"/>
+</kw>
+<status status="PASS" starttime="20230310 06:51:52.155" endtime="20230310 06:51:52.168"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230310 06:51:52.168" endtime="20230310 06:51:52.395"/>
+</kw>
+<doc>Automation testing</doc>
+<tag>Functional</tag>
+<status status="PASS" starttime="20230310 06:49:20.246" endtime="20230310 06:51:52.395"/>
+</test>
+<status status="PASS" starttime="20230310 06:49:20.094" endtime="20230310 06:51:52.396"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Functional</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="fetchTest">fetchTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
